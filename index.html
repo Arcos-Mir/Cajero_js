@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.min.js">
+    <script defer src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <!-- <script defer src="script.js"></script> -->
+    <script defer src="main.js"></script>
+</head>
+<body class="container-fluid bg-secondary d-flex justify-content-evenly">
+    <main class="content-lg bg-secondary d-flex justify-content-evenly">
+        <article class="content-md bg-black">
+            
+            <!-- botones para seleccionar opciones en pantalla -->
+            <div class="btn1">
+            <button id="salir" onclick="exitPage();" class="btn btn-secondary btn-lg" type="button"></button>
+            <button id="ingresar" onclick="addPage();" class="btn btn-secondary btn-lg" type="button"></button>
+            <button id="extraer" onclick="substractPage();" class="btn btn-secondary btn-lg" type="button"></button>
+            <button id="inicio" onclick="startPage();" class="btn btn-secondary btn-lg" type="button"></button></div>
+            
+            <!-- pantalla inicio-->
+            <section class="content-sm bg-primary bg-gradient d-flex justify-content-evenly">
+                <div class="content_1">
+                    <!-- <h1>DEVF BANK</h1> -->
+                    <img src="card_img/logobank2.png" alt="" width="400px" height="300px">
+                    <div class="contain_1">
+                        <H2>Bienvenido!!!</H2>
+                        <form id="userValue" name="userValue" class="" action="">
+                            <div id="account">
+                                <label for="">Ingresa número de cuenta/Account</label>
+                                <input id="userN" type="text" name="ans" placeholder="Account" value="">
+                            </div>
+                            <div class="nip">
+                                <label for="password">Ingresa Contraseña/NIP</label>
+                                <input id="password" type="password" name="ans" placeholder="NIP" value="">
+                            </div>
+                        </form>
+                        <div class="message">
+                            <label for=""></label>
+                        </div>
+                        <label class="continue" for="">Continuar -----></label>
+                    </div>
+                </div>
+
+                <!-- pantalla usuario bienvenido!!!-->
+                <div class="content_2">
+                    <h1>Bienvenido!!!</h1>
+                    <div class="nameUser">
+                        <label for=""></label>
+                    </div>
+                    <img src="card_img/avatar2.png" alt="" width="150px" height="150px">
+                    <p class="lbl">Hola!!! Soy Dave de DEVF Bank...</p>
+                    <p class="lbl">¿Qué operación te gustaría realizar?</p>
+                    <div class="lbl2">
+                        <label for="">Consultar Saldo --- ></label>
+                    </div>
+                    <div class="lbl2">
+                        <label for="">Depositar a Cuenta --- ></label>
+                    </div>
+                    <div class="lbl2">
+                        <label for="">Retirar de Cuenta --- ></label>
+                    </div>
+                    <div class="lbl3">
+                        <label for=""><----- Anterior</label>
+                    </div>
+                </div>
+
+                <!-- pantalla consultar saldo!!!-->
+                <div class="content_3">
+                    <img src="card_img/avatar2.png" alt="" width="150px" height="150px">
+                    <p class="lbl">Hi!!! Soy Dave de DEVF Bank...</p>
+                    <p class="lbl">Tu saldo es...!!!</p>
+                    <div class="userSaldo">
+                        <label for=""></label>
+                    </div>
+                    <div class="lbl2">
+                        <label for="">Depositar a Cuenta --- ></label>
+                    </div>
+                    <div class="lbl2">
+                        <label for="">Retirar de Cuenta --- ></label>
+                    </div>
+                    <div class="lbl4">
+                        <label for=""><----- Inicio</label>
+                    </div>
+                </div>
+
+                <!-- pantalla  depositar a cuenta!!!-->
+                <div class="content_4">
+                    <img src="card_img/avatar2.png" alt="" width="150px" height="150px">
+                    <p class="lbl">Hi!!! Soy Dave...</p>
+                    <p class="lbl">¿Cuánto deseas depositar?...</p>
+                    <div id="addit" class="lbl">
+                        <input id="addMoney" type="text" placeholder="--$">
+                    </div>
+                    <p class="lbl">tu saldo actual es: ...</p>
+                    <div class="userSaldo">
+                        <label id="addTotal" for=""></label>
+                    </div>
+                    <div class="lbl5">
+                        <label for=""><----- Agregar Saldo</label>
+                    </div>
+                    <div class="lbl2">
+                        <label for="">Retirar de Cuenta --- ></label>
+                    </div>
+                    <div class="lbl4">
+                        <label for=""><----- Inicio</label>
+                    </div>
+                </div>
+
+
+                <!-- pantalla  retirar de cuenta!!!-->
+                <div class="content_5">
+                    <img src="card_img/avatar2.png" alt="" width="150px" height="150px">
+                    <p class="lbl">Hi!!! Soy Dave...</p>
+                    <p class="lbl">¿Cuánto deseas retirar?...</p>
+                    <div class="lbl">
+                        <input id="subsMoney" type="text" placeholder="--$">
+                    </div>
+                    <p class="lbl5"><----- Salir  _____________ * tu saldo actual es: ...</p>
+                    <div class="userSaldo">
+                        <label id="subsTotal" for="">saldo</label>
+                    </div>
+                    <div class="lbl5">
+                        <label for=""><----- Retirar Saldo</label>
+                    </div>
+                    <div class="lbl4">
+                        <label for=""><----- Inicio</label>
+                    </div>
+                </div>
+
+                <!-- pantalla consultar retirar de cuenta!!!-->
+
+                <div class="content_6">
+                    <img src="card_img/avatar2.png" alt="" width="150px" height="150px">
+                    <p class="lbl">Hi!!! Soy Dave...</p>
+                    <p class="lbl">Me dió gusto orientarte...</p>
+                    <p class="lbl">Espero verte pronto!!!...</p>
+                    <p class="lbl">Bye 👋 !!!...</p>
+                    <div class="lbl4">
+                        <label for=""><----- Inicio</label>
+                    </div>
+                </div>
+
+            </section>
+            <!-- botones para seleccionar opciones en pantalla -->
+            <div class="btn2">
+                <button id="consultar" onclick="userPage();" class="btn btn-secondary btn-lg" type="button"></button>
+                <button id="depositar" onclick="depositPage();" class="btn btn-secondary btn-lg" type="button"></button>
+                <button id="retirar" onclick="extractPage();" class="btn btn-secondary btn-lg" type="button"></button>
+                <button id="userValue" onclick="login();" class="btn btn-secondary btn-lg" type="button"></button></div>
+        </article>
+        <article class="card bg-secondary">
+            
+            <!-- cards bank -->
+            <img src="card_img/1.png" class=" card1 mx-auto d-flex" alt="card1">
+            <img src="card_img/2.png" class=" card1 mx-auto d-flex" alt="card2">
+            <img src="card_img/3.png" class=" card1 mx-auto d-flex" alt="card3">
+            
+            <!-- box numérico -->
+            <form class="calc bg-black d-flex justify-content-evenly">
+                <div class="btn3">
+                    <button id="number1" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='1'">1</button>
+                    <button id="number4" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='4'">4</button>
+                    <button id="number7" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='7'">7</button>
+                </div>
+                <div class="btn3">
+                    <button id="number2" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='2'">2</button>
+                    <button id="number5" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='5'">5</button>
+                    <button id="number8" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='8'">8</button>
+                    <button id="number0" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='0'">0</button>
+                </div>
+                <div class="btn3">
+                    <button id="number3" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='3'">3</button>
+                    <button id="number6" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='6'">6</button>
+                    <button id="number9" class="btn4 bg-info-subtle btn-lg" type="button" onclick="document.userValue.userN.value+='9'">9</button>
+                </div>
+                <div class="btn3">
+                    <button id="btnEnter" class="btn5 bg-success btn-lg" type="button" onclick="login();">Enter</button>
+                    <button id="btnClear" class="btn5 bg-warning btn-lg" type="reset" onclick="document.userValue.userN.value=''">Clear</button>
+                    <button id="btnClose" class="btn5 bg-danger btn-lg" type="button" onclick="location.href = location.href">Close</button>
+                </div>
+                <div class="btn3">
+                    
+                </div>
+                
+            </form>
+        </article>
+    </main>
+</body>
+</html>
